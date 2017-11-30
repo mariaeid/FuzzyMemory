@@ -11,9 +11,10 @@ div.main {
 
 div.board {
   width: 80%;
-  height: 80vh;
+  padding: 5% 8%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: var(--board-color);
   border: solid black 3px;
 }
@@ -21,10 +22,11 @@ div.board {
 div.cards {
   background: #f6546a;
   border: #000 1px solid;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin: 10px;
-  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
   font-size: 64px;
   cursor: pointer;
 }
