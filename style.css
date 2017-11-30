@@ -1,0 +1,30 @@
+
+:root {
+  --board-color:  #fff;
+}
+
+div.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.board {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--board-color);
+  border: solid black 3px;
+}
+
+div.cards {
+  background: #f6546a;
+  border: #000 1px solid;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  padding: 20px;
+  font-size: 64px;
+  cursor: pointer;
+}
