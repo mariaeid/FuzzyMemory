@@ -21,6 +21,7 @@ div.board {
 
 div.cards {
   background: #f6546a;
+  color: #f6546a;
   border: #000 1px solid;
   width: 100px;
   height: 100px;
@@ -29,4 +30,6 @@ div.cards {
   vertical-align: middle;
   font-size: 64px;
   cursor: pointer;
+  opacity: 1;
+  transition: .5s ease-out;
 }
