@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 
 .board {
@@ -15,15 +16,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: var(--board-color);
-  border: solid black 3px;
+  background-image: url("snow.gif");
+  background-size: cover;
+  border: solid white 3px;
 }
 
 .cards {
   background-image: url("santa.png");
   background-size: contain;
   color:rgba(255,255,255,0);
-  border: #000 1px solid;
+  border: #fff 1px solid;
   width: 100px;
   height: 100px;
   margin: 10px;
@@ -36,7 +38,7 @@
 }
 
 .cardFlipped {
-  color:rgba(189,0,1,1);
+  color:rgba(255,255,255,1);
   background-image: none;
   transition: .5s ease-in;
   /*animation-name: flip;
