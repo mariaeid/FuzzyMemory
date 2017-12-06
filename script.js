@@ -3,7 +3,7 @@
 let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
 let memory_values = [];
 let memory_tile_id = [];
-let cardsFront = [];
+let cardsFlipped = [];
 let tiles_flipped = 0;
 
 function shuffle(a) {
@@ -16,59 +16,53 @@ function shuffle(a) {
 
 memory_array = shuffle(memory_array);
 
-var boardDiv = document.querySelector('.board');
+const boardDiv = document.querySelector('.board');
+
 
 memory_array.forEach(function(memory_array_item, index) {
-  var cardDiv = document.createElement('div');
+  const cardDiv = document.createElement('div');
   cardDiv.className = 'cards';
   cardDiv.dataset.id="0";
   cardDiv.innerText = memory_array_item;
   cardDiv.addEventListener('click', function() {
-    cardDiv.style.color = '#fff';
+    cardDiv.classList.add('cardFlipped');
     if (cardDiv.dataset.id !== "2"){
       cardDiv.dataset.id="1";
     }
     let counter = 0;
-    let text;
-    cardsFront.forEach(function(cardsFront_item, index) {
-      var id = cardsFront_item.dataset.id;
+    let card;
+    cardsFlipped.forEach(function(cardFlipped, index) {
+      const id = cardFlipped.dataset.id;
       if (id === "1") {
-        cardsFront_item.style.color = '#fff';
+        cardFlipped.classList.add('cardFlipped');
         setTimeout(function(){
           if (counter < 1) {
-            text = cardsFront[index];
+            card = cardsFlipped[index];
             counter++;
           }
           else {
-            if (text.innerText === cardsFront_item.innerText) {
-              console.log("hello");
+            if (card.innerText === cardFlipped.innerText) {
               counter = 0;
-              text.dataset.id = "2";
-              cardsFront_item.dataset.id = "2";
+              card.dataset.id = "2";
+              cardFlipped.dataset.id = "2";
             }
             else {
               counter = 0;
-              text.style.color = '#f6546a';
-              cardsFront_item.style.color = '#f6546a';
-              if (cardDiv.dataset.id !== "2"){
-                text.dataset.id = "0";
-                cardsFront_item.dataset.id = "0";
+              card.classList.add('cardBack');
+              cardFlipped.classList.add('cardBack');
+              if (cardDiv.dataset.id !== "2"){ //Ta bort if-satsen??
+                card.dataset.id = "0";
+                cardFlipped.dataset.id = "0";
               }
             }
           }
         }, 1000);
       }
-
     });
   });
 
-  cardsFront[index] = cardDiv;
-
-  var boardDiv = document.querySelector('.board');
+  cardsFlipped[index] = cardDiv;
   boardDiv.appendChild(cardDiv);
   console.log(memory_array_item + ' ' + index);
 
 });
-
-
-// console.log(cardsFront[3].innerText);
