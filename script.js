@@ -48,8 +48,8 @@ memory_array.forEach(function(memory_array_item, index) {
             }
             else {
               counter = 0;
-              card.classList.add('cardBack');
-              cardFlipped.classList.add('cardBack');
+              card.classList.remove('cardFlipped');
+              cardFlipped.classList.remove('cardFlipped');
               if (cardDiv.dataset.id !== "2"){ //Ta bort if-satsen??
                 card.dataset.id = "0";
                 cardFlipped.dataset.id = "0";

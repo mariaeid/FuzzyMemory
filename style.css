@@ -20,25 +20,34 @@
 }
 
 .cards {
-  background: #f6546a;
-  color: #f6546a;
+  background-image: url("santa.png");
+  background-size: contain;
+  color:rgba(255,255,255,0);
   border: #000 1px solid;
   width: 100px;
   height: 100px;
   margin: 10px;
+  font-size: 64px;
   text-align: center;
   vertical-align: middle;
-  font-size: 0px;
   cursor: pointer;
-  transition: .5s ease-out;
+  perspective: 1000;
+  transition-duration: 0s;
 }
 
 .cardFlipped {
-  color:#fff;
-  font-size: 64px;
+  color:rgba(189,0,1,1);
+  background-image: none;
+  transition: .5s ease-in;
+  /*animation-name: flip;
+  animation-duration: .5s;*/
 }
 
-.cardBack{
-  color: #f6546a;
-  font-size: 64px;
-}
+/*@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}*/
