@@ -1,0 +1,233 @@
+@media screen and (min-width: 320px) {
+
+  .main {
+	  padding: 10% 0%;
+	}
+
+	.board {
+		padding: 10% 0%;
+		width: 100%;
+	}
+
+	.cards {
+	  width: 65px;
+	  height: 65px;
+	  margin: 5px;
+	  font-size: 55px;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+}
+
+@media screen and (min-width: 360px) {
+
+	.main {
+	  padding: 10% 0%;
+	}
+
+	.board {
+		padding: 10% 4%;
+		width: 100%;
+	}
+
+	.cards {
+	  width: 65px;
+	  height: 65px;
+	  margin: 5px;
+	  font-size: 55px;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+}
+
+@media screen and (min-width: 412px) {
+
+	.main {
+	  padding: 10% 0%;
+	}
+
+	.board {
+		padding: 10% 7%;
+		width: 100%;
+	}
+
+	.cards {
+	  width: 80px;
+	  height: 80px;
+	  margin: 5px;
+	  font-size: 65px;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+}
+
+@media screen and (min-width: 530px) {
+
+	.main {
+	  padding: 3% 0%;
+	}
+
+	.board {
+		padding: 10% 10%;
+		width: 100%;
+	}
+
+	.cards {
+	  width: 95px;
+	  height: 95px;
+	  margin: 5px;
+	  font-size: 65px;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+
+	.main {
+	  padding: 13% 1%;
+	}
+
+	.board {
+		padding: 5% 8%;
+	}
+
+	.cards {
+	  width: 110px;
+	  height: 110px;
+	  margin: 10px;
+	  font-size: 70px;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+}
+
+@media screen and (min-width: 800px) {
+
+	.main {
+	  padding: 1%;
+	}
+
+	.board {
+		padding: 1% 14%;
+	}
+
+	.cards {
+	  width: 80px;
+	  height: 80px;
+	  margin: 10px;
+	  font-size: 70px;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+}
+
+@media screen and (min-width: 990px) {
+
+	.main {
+	  padding: 1%;
+	}
+
+	.board {
+		padding: 1% 15%;
+	}
+
+	.cards {
+	  width: 80px;
+	  height: 80px;
+	  margin: 10px;
+	  font-size: 70px;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+	@media screen and (min-width: 1024px) {
+
+		.main {
+		  padding: 1% 5%;
+		}
+
+		.board {
+			padding: 1% 18%;
+		}
+
+		.cards {
+		  width: 80px;
+		  height: 80px;
+		  margin: 10px;
+		  font-size: 70px;
+		}
+
+		.button {
+			padding: 10px 25px;
+		}
+
+}
+
+		@media screen and (min-width: 1270px) {
+
+			.main {
+			  padding: 1% 5%;
+			}
+
+			.board {
+				padding: 3% 10%;
+				width: 60%;
+			}
+
+			.cards {
+			  width: 80px;
+			  height: 80px;
+			  margin: 10px;
+			  font-size: 70px;
+			}
+
+			.button {
+				padding: 10px 25px;
+			}
+
+}
+
+@media screen and (min-width: 1550px) {
+
+	.main {
+		padding: 3% 5%;
+	}
+
+	.board {
+		padding: 1% 25%;
+		width: 60%;
+	}
+
+	.cards {
+		width: 80px;
+		height: 80px;
+		margin: 10px;
+		font-size: 70px;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+}
