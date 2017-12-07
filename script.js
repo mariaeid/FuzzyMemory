@@ -1,10 +1,10 @@
 'use strict';
 
 let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
-let memory_values = [];
-let memory_tile_id = [];
 let cardsFlipped = [];
 let tiles_flipped = 0;
+let card;
+let cardFlipped;
 
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -18,7 +18,6 @@ memory_array = shuffle(memory_array);
 
 const boardDiv = document.querySelector('.board');
 
-
 memory_array.forEach(function(memory_array_item, index) {
   const cardDiv = document.createElement('div');
   cardDiv.className = 'cards';
@@ -30,7 +29,6 @@ memory_array.forEach(function(memory_array_item, index) {
       cardDiv.dataset.id="1";
     }
     let counter = 0;
-    let card;
     cardsFlipped.forEach(function(cardFlipped, index) {
       const id = cardFlipped.dataset.id;
       if (id === "1") {
@@ -60,9 +58,12 @@ memory_array.forEach(function(memory_array_item, index) {
       }
     });
   });
-
   cardsFlipped[index] = cardDiv;
   boardDiv.appendChild(cardDiv);
   console.log(memory_array_item + ' ' + index);
+});
 
+const button = document.querySelector('button');
+button.addEventListener('click', function() {
+  location.reload();
 });
