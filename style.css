@@ -7,12 +7,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   height: 100vh;
+  padding: 2%;
+}
+
+h1 {
+  color: #bd0001;
+  padding: 0px;
+  margin: 0px!important;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .board {
   width: 80%;
-  padding: 5% 8%;
+  padding: 2% 8%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -26,10 +35,10 @@
   background-size: contain;
   color:rgba(255,255,255,0);
   border: #fff 1px solid;
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   margin: 10px;
-  font-size: 64px;
+  font-size: 70px;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -43,6 +52,18 @@
   transition: .5s ease-in;
   /*animation-name: flip;
   animation-duration: .5s;*/
+}
+
+.button {
+  background-color: #bd0001;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 /*@keyframes flip {
