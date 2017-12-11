@@ -21,13 +21,13 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-image: url("snow.gif");
+  background-image: url("imgs/snow.gif");
   background-size: cover;
   border: solid white 3px;
 }
 
 .cards {
-  background-image: url("santa.png");
+  background-image: url("imgs/santa.png");
   background-size: contain;
   background-position: center;
   color:rgba(255,255,255,0); /*Vit färg med opcity 0*/
@@ -42,7 +42,7 @@ h1 {
   transition-duration: 0s;
   user-select: none;
   -moz-user-select: none;
-}
+}  
 
 .cardFlipped {
   color:rgba(255,255,255,1); /*Vit färg med opacity 1*/
@@ -63,7 +63,7 @@ h1 {
 }
 
 .won {
-  background-image: url("won.png");
+  background-image: url("imgs/won.png");
   background-size: contain;
   background-position: center;
   z-index: 100;
