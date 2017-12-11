@@ -1,8 +1,4 @@
 
-:root {
-  --board-color:  #fff;
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -30,15 +26,11 @@ h1 {
   border: solid white 3px;
 }
 
-.cardsNoClick {
-  pointer-events: none;
-}
-
 .cards {
   background-image: url("santa.png");
   background-size: contain;
   background-position: center;
-  color:rgba(255,255,255,0);
+  color:rgba(255,255,255,0); /*Vit färg med opcity 0*/
   border: #fff 1px solid;
   width: 20%;
   height: 10%;
@@ -46,13 +38,14 @@ h1 {
   font-size: 70px;
   text-align: center;
   vertical-align: middle;
-
   cursor: pointer;
   transition-duration: 0s;
+  user-select: none;
+  -moz-user-select: none;
 }
 
 .cardFlipped {
-  color:rgba(255,255,255,1);
+  color:rgba(255,255,255,1); /*Vit färg med opacity 1*/
   background-image: none;
   transition: .5s ease-in;
 }
@@ -67,4 +60,15 @@ h1 {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+}
+
+.won {
+  background-image: url("won.png");
+  background-size: contain;
+  background-position: center;
+  z-index: 100;
+}
+
+.hidden {
+  visibility: hidden;
 }
