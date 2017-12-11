@@ -1,6 +1,6 @@
-# FuzzyMemory
+# Fuzzy Memory - Christmas edition
 
-Assignment 1 Javascript
+<img src="https://media.giphy.com/media/uQDAIMaLTPq8M/giphy.gif" alt="07 - Good News" width="100%">
 
 This is the first assignment in the course Javascript at YRGO yrkeshögskola.
 
