@@ -1,11 +1,17 @@
 
-.main {
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
   padding: 1%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -42,12 +48,16 @@ h1 {
   transition-duration: 0s;
   user-select: none;
   -moz-user-select: none;
-}  
+}
 
 .cardFlipped {
   color:rgba(255,255,255,1); /*Vit färg med opacity 1*/
   background-image: none;
   transition: .5s ease-in;
+}
+
+.noEvents {
+  pointer-events: none;
 }
 
 .button {
@@ -63,12 +73,36 @@ h1 {
 }
 
 .won {
-  background-image: url("imgs/won.png");
+  background-image: url("imgs/won.gif");
   background-size: contain;
   background-position: center;
-  z-index: 100;
+  opacity: 1;
+	animation-name: fadein;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
 }
 
 .hidden {
-  visibility: hidden;
+  opacity: 0;
+  animation-name: fadeout;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
