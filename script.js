@@ -20,13 +20,11 @@ const boardDiv = document.querySelector('.board');
 const main = document.querySelector('.main');
 
 memoryArray.forEach(function(memoryArrayItem, index) {
-  let card = memoryArray[index];
-  card = document.createElement('div');
+  let card = document.createElement('div');
   card.className = 'cards';
-  card.dataset.id = memoryArrayItem;
   card.innerText = memoryArrayItem;
   boardDiv.appendChild(card);
-  console.log(memoryArrayItem+' '+index);
+  console.log(memoryArrayItem + ' ' + index);
 });
 
 let cardArray = document.querySelectorAll('.cards');
@@ -39,11 +37,10 @@ cardArray.forEach(function(card) {
     if (cardsFlipped.length === 2) {
       boardDiv.classList.add('noEvents'); //The user can't click on other cards while this class exists
 
-      if (cardsFlipped[0].dataset.id === cardsFlipped[1].dataset.id) {
+      if (cardsFlipped[0].innerText === cardsFlipped[1].innerText) {
         matches++;
         cardsFlipped = [];
         boardDiv.classList.remove('noEvents');
-        console.log(matches);
       }
       else {
         setTimeout(function () {
@@ -54,8 +51,6 @@ cardArray.forEach(function(card) {
         }, 1000);
       }
       if (matches === 8) {
-        console.log("Victory!");
-        matches = 0;
         boardDiv.classList.add('hidden');
         main.classList.add('won');
       }
@@ -70,10 +65,9 @@ button.addEventListener('click', function() {
   boardDiv.classList.remove('hidden');
   main.classList.remove('won');
 
-  cardArray.forEach(function(memoryArrayItem, index) {
-    memoryArrayItem.classList.remove('cardFlipped');
-    memoryArrayItem.dataset.id = memoryArray[index];
-    memoryArrayItem.innerText = memoryArray[index];
+  cardArray.forEach(function(cardArrayItem, index) {
+    cardArrayItem.classList.remove('cardFlipped');
+    cardArrayItem.innerText = memoryArray[index];
   });
 });
 
