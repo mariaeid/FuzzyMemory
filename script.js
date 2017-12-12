@@ -53,7 +53,7 @@ cardArray.forEach(function(card) {
           boardDiv.classList.remove('noEvents');
         }, 1000);
       }
-      if (matches === 2) {
+      if (matches === 8) {
         console.log("Victory!");
         matches = 0;
         boardDiv.classList.add('hidden');
