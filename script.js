@@ -17,6 +17,7 @@ function shuffle(a) {
 memoryArray = shuffle(memoryArray);
 
 const boardDiv = document.querySelector('.board');
+const main = document.querySelector('.main');
 
 memoryArray.forEach(function(memoryArrayItem, index) {
   let card = memoryArray[index];
@@ -25,6 +26,7 @@ memoryArray.forEach(function(memoryArrayItem, index) {
   card.dataset.id = memoryArrayItem;
   card.innerText = memoryArrayItem;
   boardDiv.appendChild(card);
+  console.log(memoryArrayItem+' '+index);
 });
 
 let cardArray = document.querySelectorAll('.cards');
@@ -51,9 +53,11 @@ cardArray.forEach(function(card) {
           boardDiv.classList.remove('noEvents');
         }, 1000);
       }
-      if (matches === 8) {
+      if (matches === 2) {
         console.log("Victory!");
         matches = 0;
+        boardDiv.classList.add('hidden');
+        main.classList.add('won');
       }
     }
   });
@@ -63,6 +67,8 @@ const button =  document.querySelector('button');
 button.addEventListener('click', function() {
   matches = 0;
   memoryArray = shuffle(memoryArray);
+  boardDiv.classList.remove('hidden');
+  main.classList.remove('won');
 
   cardArray.forEach(function(memoryArrayItem, index) {
     memoryArrayItem.classList.remove('cardFlipped');
