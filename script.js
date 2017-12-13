@@ -25,7 +25,6 @@ memoryArray.forEach(function(memoryArrayItem, index) {
   card.className = 'cards';
   card.innerText = memoryArrayItem;
   boardDiv.appendChild(card);
-  console.log(memoryArrayItem + ' ' + index);
 });
 
 //Selecting all divs with the card class
