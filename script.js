@@ -1,8 +1,8 @@
 'use strict';
 
-let memoryArray = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
-let cardsFlipped = [];
-let matches = 0;
+let memoryArray = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H']; //Array of values to be used on the cards
+let cardsFlipped = []; //Empty array to push clicked cards into
+let matches = 0; //Counter for the matched cards
 
 // shuffle function
 function shuffle(a) {
@@ -19,6 +19,7 @@ memoryArray = shuffle(memoryArray);
 const boardDiv = document.querySelector('.board');
 const main = document.querySelector('.main');
 
+//Creation of card-divs and their properties
 memoryArray.forEach(function(memoryArrayItem, index) {
   let card = document.createElement('div');
   card.className = 'cards';
@@ -27,29 +28,34 @@ memoryArray.forEach(function(memoryArrayItem, index) {
   console.log(memoryArrayItem + ' ' + index);
 });
 
+//Selecting all divs with the card class
 let cardArray = document.querySelectorAll('.cards');
 
+//If a card is clicked it get a new class and is pushed to the at start empty array
 cardArray.forEach(function(card) {
   card.addEventListener('click', function() {
     card.classList.add('cardFlipped');
     cardsFlipped.push(card);
 
+    //If there are 2 cards in the cardsFlipped array a class is added. The user can't click on other cards while this class exists
     if (cardsFlipped.length === 2) {
-      boardDiv.classList.add('noEvents'); //The user can't click on other cards while this class exists
+      boardDiv.classList.add('noEvents');
 
+      //Checks if the first card in the array has the same inner text as the second card
       if (cardsFlipped[0].innerText === cardsFlipped[1].innerText) {
         matches++;
         cardsFlipped = [];
         boardDiv.classList.remove('noEvents');
       }
       else {
-        setTimeout(function () {
+        setTimeout(function () { //Timeout function so the user has some time to look at both cards flipped before they are turned back
           cardsFlipped[0].classList.remove('cardFlipped');
           cardsFlipped[1].classList.remove('cardFlipped');
           cardsFlipped = [];
           boardDiv.classList.remove('noEvents');
         }, 1000);
       }
+      //Winning of the game - 8 matches
       if (matches === 8) {
         boardDiv.classList.add('hidden');
         main.classList.add('won');
@@ -59,6 +65,8 @@ cardArray.forEach(function(card) {
 });
 
 const button =  document.querySelector('button');
+
+//Reset function that executes when clicking on the replay button. Setting matches to 0, shuffles the array, removes the winning image and the classes added when cards are flipped
 button.addEventListener('click', function() {
   matches = 0;
   memoryArray = shuffle(memoryArray);
